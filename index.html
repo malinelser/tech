@@ -272,23 +272,22 @@
             <h2 class="text-center mb-4 text-white">Contact Us</h2>
             <div class="row">
                 <div class="col-md-6 mx-auto">
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label text-white">Name</label>
-                            <input type="text" class="form-control bg-dark text-white border-0" placeholder="Your Name">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label text-white">Email</label>
-                            <input type="email" class="form-control bg-dark text-white border-0"
-                                placeholder="Your Email">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label text-white">Message</label>
-                            <textarea class="form-control bg-dark text-white border-0" rows="4"
-                                placeholder="Your Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-custom w-100">Send Message</button>
-                    </form>
+
+<form action="sendmail.php" method="POST" id="contactForm">
+    <div class="mb-3">
+        <label for="name" class="form-label text-white">Name</label>
+        <input type="text" name="name" class="form-control bg-dark text-white border-0" id="name" placeholder="Your Name" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label text-white">Email</label>
+        <input type="email" name="email" class="form-control bg-dark text-white border-0" id="email" placeholder="Your Email" required>
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label text-white">Message</label>
+        <textarea class="form-control bg-dark text-white border-0" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-custom w-100">Send Message</button>
+</form>
                 </div>
             </div>
         </div>
@@ -320,8 +319,60 @@
             });
         });
     });
+
+// Contact form submission
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        
+        // Show loading state
+        submitButton.disabled = true;
+        submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+        
+        fetch(this.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Create alert element
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${data.status === 'success' ? 'success' : 'danger'} mt-3`;
+            alertDiv.textContent = data.message;
+            
+            // Insert after form
+            this.parentNode.insertBefore(alertDiv, this.nextSibling);
+            
+            // Reset form if successful
+            if (data.status === 'success') {
+                this.reset();
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again later.');
+        })
+        .finally(() => {
+            // Reset button state
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+            
+            // Remove alert after 5 seconds
+            setTimeout(() => {
+                const alert = document.querySelector('.alert');
+                if (alert) alert.remove();
+            }, 5000);
+        });
+    });
+}
+
 </script>
 
 </body>
 
-</html> 
+</html>
