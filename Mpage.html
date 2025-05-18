@@ -141,7 +141,7 @@
             opacity: 1;
         }
 
-        /* Fixed Left Sidebar */
+        /* Fixed Left Sidebar - For Desktop */
         .fixed-left {
             position: fixed;
             top: 56px;
@@ -164,6 +164,32 @@
             /* Adjust size as needed */
 
         }
+
+        /* Mobile styles */
+@media (max-width: 768px) {
+    .fixed-left {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 20px 15px;
+    }
+    
+    .scrollable-content {
+        margin-left: 0;
+        padding: 20px 15px;
+    }
+    
+    /* Adjust the card layout for mobile */
+    .fixed-left .card {
+        margin-bottom: 20px;
+    }
+    
+    /* You might want to adjust the image size for mobile */
+    .fixed-left .rounded-circle {
+        width: 120px !important;
+        height: 120px !important;
+    }
+}
 
         /* Blinking animation for the button */
         @keyframes blink {
