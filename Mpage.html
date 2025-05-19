@@ -38,10 +38,9 @@
 
         .navbar-brand,
         .nav-link {
-            color: var(--yellow-accent);
-            /* Default color */
-            transition: color 0.3s ease-in-out;
-            /* Smooth transition */
+            color: var(--yellow-accent); /* Default color */
+            transition: color 0.3s ease-in-out; /* Smooth transition */
+            font-size: 16px !important; /* Force fixed size */
         }
 
         .nav-link:hover {
@@ -132,7 +131,7 @@
             color: white;
             padding: 8px 12px;
             border-radius: 8px;
-            font-size: 14px;
+            font-size: 1rem;
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
         }
@@ -328,6 +327,32 @@
             color: #FFD700;
         }
         /* Function owner list ends*/
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFD700;
+            font-size: 1.1rem;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            pointer-events: none; /* This makes the overlay non-interactive */
+        }
+
+        .overlay-content {
+            pointer-events: auto; /* Content inside overlay can be interactive */
+        }
+        
+        .overlay.show {
+            opacity: 1;
+        }
     </style>
     <link rel="icon" type="image/png" href="logoPic.png">
 </head>
@@ -663,8 +688,15 @@
         </div>
     </div>
 
-
-
+    <!-- Overlay element (non-interactive background) -->
+    <div class="overlay" id="timedOverlay">
+        <!-- Interactive content inside overlay -->
+        <div class="overlay-content text-center">
+            <!-- <h2>Try clicking blinking objects :)</h2> -->
+            <p>Try clicking blinking objects :)</p>
+            <!-- <button class="btn btn-light mt-3">Close</button> -->
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="text-center py-3">
@@ -683,6 +715,21 @@
                 this.classList.add('stopped-blinking'); // Set solid yellow color
             });
         });
+
+        // fading overlay
+         setTimeout(function() {
+                const overlay = document.getElementById('timedOverlay');
+                overlay.classList.add('show');
+                
+                setTimeout(function() {
+                    overlay.classList.remove('show');
+                    
+                    // Optional: Remove overlay from DOM after fade out
+                    setTimeout(function() {
+                        overlay.remove();
+                    }, 1000); // Match this with CSS transition time
+                }, 3000); // Show for 3 seconds
+            }, 7000); // Wait seconds before showing
 
         // Gear button spin animation
         document.querySelectorAll('.gear-btn').forEach(button => {
