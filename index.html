@@ -84,6 +84,18 @@
             position: relative;
             z-index: 1;
         }
+        
+.logoPic {
+  max-width: 100px;
+  transition: max-width 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  .logoPic {
+    max-width: 80px;
+  }
+}
+
 
         .btn-custom {
             background-color: var(--yellow-accent);
@@ -213,7 +225,7 @@
     <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content text-center">
-            <img src="logoPic.png" alt="Elser Engineering Logo" class="img-fluid mb-3" style="max-width: 100px;">
+<img src="logoPic.png" alt="Elser Engineering Logo" class="img-fluid mb-3 logoPic">
             <div class="col-md">
                 <h2 class="fw-bold mb-4" style="color: #FFD700;">ELSER ENGINEERING</h2>
 
