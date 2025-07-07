@@ -38,9 +38,12 @@
 
         .navbar-brand,
         .nav-link {
-            color: var(--yellow-accent); /* Default color */
-            transition: color 0.3s ease-in-out; /* Smooth transition */
-            font-size: 16px !important; /* Force fixed size */
+            color: var(--yellow-accent);
+            /* Default color */
+            transition: color 0.3s ease-in-out;
+            /* Smooth transition */
+            font-size: 16px !important;
+            /* Force fixed size */
         }
 
         .nav-link:hover {
@@ -165,31 +168,32 @@
         }
 
         /* Mobile styles */
-@media (max-width: 768px) {
-    .fixed-left {
-        position: static;
-        margin-top: 46px; /* Adjust based on navbar height */
-        width: 100%;
-        height: auto;
-        padding: 20px 15px;
-    }
-    
-    .scrollable-content {
-        margin-left: 0;
-        padding: 20px 15px;
-    }
-    
-    /* Adjust the card layout for mobile */
-    .fixed-left .card {
-        margin-bottom: 20px;
-    }
-    
-    /* You might want to adjust the image size for mobile */
-    .fixed-left .rounded-circle {
-        width: 120px !important;
-        height: 120px !important;
-    }
-}
+        @media (max-width: 768px) {
+            .fixed-left {
+                position: static;
+                margin-top: 46px;
+                /* Adjust based on navbar height */
+                width: 100%;
+                height: auto;
+                padding: 20px 15px;
+            }
+
+            .scrollable-content {
+                margin-left: 0;
+                padding: 20px 15px;
+            }
+
+            /* Adjust the card layout for mobile */
+            .fixed-left .card {
+                margin-bottom: 20px;
+            }
+
+            /* You might want to adjust the image size for mobile */
+            .fixed-left .rounded-circle {
+                width: 120px !important;
+                height: 120px !important;
+            }
+        }
 
         /* Blinking animation for the button */
         @keyframes blink {
@@ -307,13 +311,13 @@
             list-style-type: none;
             padding-left: 0;
         }
-        
+
         .tech-list li {
             position: relative;
             padding-left: 30px;
             margin-bottom: 6px;
         }
-        
+
         .tech-list li:before {
             content: "→";
             color: #FFD700;
@@ -322,7 +326,7 @@
             position: absolute;
             left: 0;
         }
-        
+
         /*.tech-list strong {
             color: #FFD700;
         }
@@ -343,13 +347,15 @@
             font-size: 1.1rem;
             opacity: 0;
             transition: opacity 1s ease-in-out;
-            pointer-events: none; /* This makes the overlay non-interactive */
+            pointer-events: none;
+            /* This makes the overlay non-interactive */
         }
 
         .overlay-content {
-            pointer-events: auto; /* Content inside overlay can be interactive */
+            pointer-events: auto;
+            /* Content inside overlay can be interactive */
         }
-        
+
         .overlay.show {
             opacity: 1;
         }
@@ -388,7 +394,7 @@
                             <img src="Malin_bild_2021_beskuren2.png" class="rounded-circle mx-auto mt-3"
                                 style="width: 150px; height: 150px; object-fit: cover;" alt="MA">
                             <div class="hover-text">
-                             <span style="color: #FFD700;">Malin</span>
+                                <span style="color: #FFD700;">Malin</span>
                             </div>
                         </a>
                     </div>
@@ -442,7 +448,8 @@
                     communication
                     between ECUs, and most recently as a software developer and software architect for the development
                     of an
-                    entirely new Thermal Supply Application Software, which also has involved extensive testing in rigs and
+                    entirely new Thermal Supply Application Software, which also has involved extensive testing in rigs
+                    and
                     trucks,
                     including driving truck on-road myself.
                 </p>
@@ -450,8 +457,9 @@
                     small,
                     ambitious teams where ideas are exchanged daily, but I also communicate effectively with other
                     teams.
-                    I enjoy teaching and have received positive feedback at my current job for the tutorials and how-to guides I have created. 
-                    When key decisions are needed to be made regarding new projects in 
+                    I enjoy teaching and have received positive feedback at my current job for the tutorials and how-to
+                    guides I have created.
+                    When key decisions are needed to be made regarding new projects in
                     my current department, people often come to me for input.
 
                 </p>
@@ -459,7 +467,8 @@
 
                 <ul class="list-unstyled main-list">
                     <li class="main-list-item">
-                        <strong class="main-list-title">Software Developer at Volvo GTT, Thermal Management, 2022 -
+                        <strong class="main-list-title" role="button" style="cursor: pointer;" data-bs-toggle="collapse"
+                            data-bs-target="#mainList1">Software Developer at Volvo GTT, Thermal Management, 2022 -
                             present.</strong>
                         <button class="btn btn-link p-0 blinking" type="button" data-bs-toggle="collapse"
                             data-bs-target="#mainList1">
@@ -470,13 +479,15 @@
 
                                 <!--nested second list-->
 
-                            <p class="ms-3">Even though I will be forever grateful for getting the opportunity, I think it's fair to
+                            <p class="ms-3">Even though I will be forever grateful for getting the opportunity, I think
+                                it's fair to
                                 say that I
                                 was
                                 rather blindsighted at first when my manager handpicked me into another team and put me
                                 on the
                                 assignment
-                                to refactor the whole software architecture of the AC control logic (balancing cooling power
+                                to refactor the whole software architecture of the AC control logic (balancing cooling
+                                power
                                 between cabin and ESS) as well as
                                 the cabin heating control logic (balancing heating power from heater and/or waste heat)!
                                 When given the task, I
@@ -489,21 +500,25 @@
                                 Management
                                 which I think my manager had seen.
                             </p>
-                            <p class="ms-3">During the last year I have led and implemented the re-designed Thermal Supply Software at GTT,
+                            <p class="ms-3">During the last year I have led and implemented the re-designed Thermal
+                                Supply Software at GTT,
                                 in close collaboration with my colleague Ramin. It has included the full scope of
                                 refactoring a software,
                                 from drawing
                                 concepts on paper to coding the new SwCs (Software Components) as well as integrating
                                 them in a new software
                                 platform (decision
-                                was taken to move to another software platform). The new Thermal Supply Software has been built on
+                                was taken to move to another software platform). The new Thermal Supply Software has
+                                been built on
                                 three main
                                 pillars; </p>
                             <p></p>
 
                             <ul class="list-unstyled sub-list">
                                 <li class="sub-list-item">
-                                    <strong class="sub-list-title">Commonality between projects</strong>
+                                    <strong class="sub-list-title" role="button" style="cursor: pointer;"
+                                        data-bs-toggle="collapse" data-bs-target="#sublist1">Commonality between
+                                        projects</strong>
                                     <button class="btn btn-link p-0 blinking gear-btn" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#sublist1">
                                         <i class="bi bi-gear"></i>
@@ -520,7 +535,9 @@
                                 </li>
 
                                 <li class="sub-list-item">
-                                    <strong class="sub-list-title">One central "brain", called the Mode Manager</strong>
+                                    <strong class="sub-list-title" role="button" style="cursor: pointer;"
+                                        data-bs-toggle="collapse" data-bs-target="#sublist2">One central "brain", called
+                                        the Mode Manager</strong>
                                     <button class="btn btn-link p-0 blinking gear-btn" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#sublist2">
                                         <i class="bi bi-gear"></i>
@@ -535,25 +552,30 @@
                                             functions. All feedback
                                             loops will in the end complicate debugging since it is hard to find "where
                                             the chain breaks first".
-                                            In a well structured software architecture with a central "brain", a.k.a. the Mode
+                                            In a well structured software architecture with a central "brain", a.k.a.
+                                            the Mode
                                             Manager, feedback loops between functions becomes unneccessary.</p>
                                     </div>
                                 </li>
 
                                 <li class="sub-list-item">
-                                    <strong class="sub-list-title">Thorough documentation</strong>
+                                    <strong class="sub-list-title" role="button" style="cursor: pointer;"
+                                        data-bs-toggle="collapse" data-bs-target="#sublist3">Thorough
+                                        documentation</strong>
                                     <button class="btn btn-link p-0 blinking gear-btn" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#sublist3">
                                         <i class="bi bi-gear"></i>
                                     </button>
                                     <div class="collapse" id="sublist3">
-                                        <p class="ms-3">Not only because I would hate it if my well thought through software
+                                        <p class="ms-3">Not only because I would hate it if my well thought through
+                                            software
                                             design would be damaged just after I left ;)
                                             But jokes asides, a company cannot only rely on the co-workers' knowledge
                                             sharing during practice. People quit and then lessons learned,
                                             as well as new inventions and guidelines, needs to be thoroughly documented
                                             for the people to come, to not risk "inventing the wheel" again.
-                                            Therefore, all requirements and function descriptions in the software needs to be documented.
+                                            Therefore, all requirements and function descriptions in the software needs
+                                            to be documented.
                                         </p>
                                     </div>
                                 </li>
@@ -570,7 +592,8 @@
                     </li>
 
                     <li class="main-list-item">
-                        <strong class="main-list-title">Subsystem owner at CEVT, Thermal
+                        <strong class="main-list-title" role="button" style="cursor: pointer;" data-bs-toggle="collapse"
+                            data-bs-target="#mainList2">Subsystem owner at CEVT, Thermal
                             Management, 2021 - 2022</strong>
                         <button class="btn btn-link p-0 blinking" type="button" data-bs-toggle="collapse"
                             data-bs-target="#mainList2">
@@ -579,7 +602,8 @@
                         <div class="collapse" id="mainList2">
                             <p></p>
                             <p class="ms-3">Responsible of managing all software requirements and CAN/LIN
-                                signal communication for the Thermal Management system in BEV (Battery Electric Vehicle).
+                                signal communication for the Thermal Management system in BEV (Battery Electric
+                                Vehicle).
                                 Interface person between the in-house developed Thermal Management Application Software,
                                 and the other Subsystems within the BEV project e.g. cloud management, HMI, etc..
                                 Leading problem-solving questions related to software, function and process changes.</p>
@@ -587,30 +611,34 @@
                     </li>
 
                     <li class="main-list-item">
-                        <strong class="main-list-title">Function Owner at CEVT, Climate, 2019 - 2021</strong>
+                        <strong class="main-list-title" role="button" style="cursor: pointer;" data-bs-toggle="collapse"
+                            data-bs-target="#mainList3">Function Owner at CEVT, Climate, 2019 - 2021</strong>
                         <button class="btn btn-link p-0 blinking" type="button" data-bs-toggle="collapse"
                             data-bs-target="#mainList3">
                             <i class="bi bi-caret-down-fill"></i>
                         </button>
                         <div class="collapse" id="mainList3">
                             <p></p>
-                            <p class="ms-3">Leading ISO 26262-compliant system safety initiatives, partnering with 
-                                GEELY’s Zhejiang team to develop climate functions for EU and Chinese markets - balancing 
+                            <p class="ms-3">Leading ISO 26262-compliant system safety initiatives, partnering with
+                                GEELY’s Zhejiang team to develop climate functions for EU and Chinese markets -
+                                balancing
                                 global standards with local customer needs.
-                                <p class="ms-3" style="font-weight: 600;">The work included a Full-Cycle Automotive Function Development</p>
+                            <p class="ms-3" style="font-weight: 600;">The work included a Full-Cycle Automotive Function
+                                Development</p>
 
-                                <ul class="tech-list">
-                                    <li>Managed all stages from UX design to vehicle validation</li>
-                                    <li>Adapted technical specifications to rapidly changing market demands</li>
-                                    <li>Developed robust subsystem signaling solutions
-                                    <li>Verified functionality through comprehensive in-car testing
-                                </ul>
+                            <ul class="tech-list">
+                                <li>Managed all stages from UX design to vehicle validation</li>
+                                <li>Adapted technical specifications to rapidly changing market demands</li>
+                                <li>Developed robust subsystem signaling solutions
+                                <li>Verified functionality through comprehensive in-car testing
+                            </ul>
                             </p>
                         </div>
                     </li>
 
                     <li class="main-list-item">
-                        <strong class="main-list-title">System Engineer at CEVT, Climate, 2019</strong>
+                        <strong class="main-list-title" role="button" style="cursor: pointer;" data-bs-toggle="collapse"
+                            data-bs-target="#mainList4">System Engineer at CEVT, Climate, 2019</strong>
                         <button class="btn btn-link p-0 blinking" type="button" data-bs-toggle="collapse"
                             data-bs-target="#mainList4">
                             <i class="bi bi-caret-down-fill"></i>
@@ -625,7 +653,8 @@
                     </li>
 
                     <li class="main-list-item">
-                        <strong class="main-list-title">System Engineer at CEVT, Transmission, 2016 - 2019</strong>
+                        <strong class="main-list-title" role="button" style="cursor: pointer;" data-bs-toggle="collapse"
+                            data-bs-target="#mainList5">System Engineer at CEVT, Transmission, 2016 - 2019</strong>
                         <button class="btn btn-link p-0 blinking" type="button" data-bs-toggle="collapse"
                             data-bs-target="#mainList5">
                             <i class="bi bi-caret-down-fill"></i>
@@ -649,28 +678,31 @@
                         <h2 class="text-center mb-4 text-white">Contact Malin</h2>
                         <div class="row">
                             <div class="col-md-6 mx-auto">
-<form action="https://formsubmit.co/malin.elser@gmail.com" method="POST">
-  <!-- Anti-spam hidden field -->
-  <input type="hidden" name="_captcha" value="false">
-  <!-- Success page redirect (optional) -->
-  <input type="hidden" name="_next" value="https://malinelser.github.io/tech/Mpage">
-<div class="mb-3">
-  <label for="name" class="form-label text-white">Name:</label>
-  <input type="text" class="form-control bg-dark text-white border-0" placeholder="Your Name" name="name" required>
-</div>
+                                <form action="https://formsubmit.co/malin.elser@gmail.com" method="POST">
+                                    <!-- Anti-spam hidden field -->
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <!-- Success page redirect (optional) -->
+                                    <input type="hidden" name="_next" value="https://malinelser.github.io/tech/Mpage">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label text-white">Name:</label>
+                                        <input type="text" class="form-control bg-dark text-white border-0"
+                                            placeholder="Your Name" name="name" required>
+                                    </div>
 
-  <div class="mb-3">
-  <label for="email" class="form-label text-white">Email:</label>
-  <input type="email" class="form-control bg-dark text-white border-0" placeholder="Your Email" name="email" required>
-</div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label text-white">Email:</label>
+                                        <input type="email" class="form-control bg-dark text-white border-0"
+                                            placeholder="Your Email" name="email" required>
+                                    </div>
 
-  <div class="mb-3">
-  <label for="message" class="form-label text-white">Message:</label>
-  <textarea name="message" class="form-control bg-dark text-white border-0" rows="4" placeholder="Your Message" required></textarea>
-</div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label text-white">Message:</label>
+                                        <textarea name="message" class="form-control bg-dark text-white border-0"
+                                            rows="4" placeholder="Your Message" required></textarea>
+                                    </div>
 
-  <button type="submit" class="btn btn-custom w-100">Send</button>
-</form>
+                                    <button type="submit" class="btn btn-custom w-100">Send</button>
+                                </form>
 
                             </div>
                         </div>
@@ -702,58 +734,58 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Main gear functionality
-        document.querySelectorAll('.blinking').forEach(button => {
-            button.addEventListener('click', function () {
-                this.classList.remove('blinking');
-                this.classList.add('stopped-blinking'); // Set solid yellow color
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Main gear functionality
+            document.querySelectorAll('.blinking').forEach(button => {
+                button.addEventListener('click', function () {
+                    this.classList.remove('blinking');
+                    this.classList.add('stopped-blinking'); // Set solid yellow color
+                });
             });
-        });
 
-        // fading overlay
-         setTimeout(function() {
+            // fading overlay
+            setTimeout(function () {
                 const overlay = document.getElementById('timedOverlay');
                 overlay.classList.add('show');
-                
-                setTimeout(function() {
+
+                setTimeout(function () {
                     overlay.classList.remove('show');
-                    
+
                     // Optional: Remove overlay from DOM after fade out
-                    setTimeout(function() {
+                    setTimeout(function () {
                         overlay.remove();
                     }, 1000); // Match this with CSS transition time
                 }, 3000); // Show for 3 seconds
-            }, 7000); // Wait seconds before showing
+            }, 10000); // Wait seconds before showing
 
-        // Gear button spin animation
-        document.querySelectorAll('.gear-btn').forEach(button => {
-            button.addEventListener('click', function () {
-                const gearIcon = this.querySelector('.bi-gear');
-                gearIcon.classList.add('spin');
-                setTimeout(() => gearIcon.classList.remove('spin'), 500);
-                console.log('Sub-list toggled:', this.dataset.bsTarget);
+            // Gear button spin animation
+            document.querySelectorAll('.gear-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const gearIcon = this.querySelector('.bi-gear');
+                    gearIcon.classList.add('spin');
+                    setTimeout(() => gearIcon.classList.remove('spin'), 500);
+                    console.log('Sub-list toggled:', this.dataset.bsTarget);
+                });
+            });
+
+            // Navbar collapse when link is clicked (mobile)
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navLinks.forEach(navLink => {
+                navLink.addEventListener('click', function () {
+                    // Check if navbar is expanded (mobile view)
+                    if (navbarCollapse.classList.contains('show')) {
+                        // Close the navbar
+                        navbarToggler.click();
+                    }
+                });
             });
         });
-
-        // Navbar collapse when link is clicked (mobile)
-        const navLinks = document.querySelectorAll('.nav-link');
-        const navbarToggler = document.querySelector('.navbar-toggler');
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        
-        navLinks.forEach(navLink => {
-            navLink.addEventListener('click', function() {
-                // Check if navbar is expanded (mobile view)
-                if (navbarCollapse.classList.contains('show')) {
-                    // Close the navbar
-                    navbarToggler.click();
-                }
-            });
-        });
-    });
-</script>
+    </script>
 
 </body>
 
-</html> 
+</html>
