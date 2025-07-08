@@ -19,15 +19,15 @@
             /* Bright Yellow */
             --light-text: #E0E0E0;
             /* Light Gray */
-            --primary-text-color: #007bff;
+            --primary-text-color: #D6D6D6;
             /* Bootstrap primary blue */
-            font-size: 14px;
+            /* font-size: 14px; */
             /* Change this value (default is typically 16px) */
         }
 
         body {
             background-color: var(--dark-bg);
-            color: var(--light-text);
+            color: var(--primary-text-color);
         }
 
         .navbar,
@@ -116,8 +116,8 @@
         .card-text {
             background-color: #1F1F1F;
             border: none;
-            color: rgb(214, 214, 214);
-            font-size: 0.9rem;
+            color: var(--primary-text-color);
+            font-size: 0.8rem;
         }
 
         /* link hovering */
@@ -134,7 +134,7 @@
             color: white;
             padding: 8px 12px;
             border-radius: 8px;
-            font-size: 1rem;
+            font-size: 0.9rem;
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
         }
@@ -162,9 +162,23 @@
             margin-left: 25%;
             padding: 80px 20px 20px;
             /* Extra padding to avoid navbar overlap */
-            /*font-size: 0.9rem;*/
+            font-size: 0.9rem;
             /* Adjust size as needed */
 
+        }
+
+        .scrollable-content h2 {
+            font-size: 1.8rem;
+            /* color: #E0E0E0; change body istead! */
+            /* margin-top: 1rem; */
+            margin-bottom: 0.5rem;
+        }
+
+        .scrollable-content p {
+            /* color: #E0E0E0; change body instead! */
+            font-size: 0.9rem;
+            line-height: 1.5;
+            /* margin-bottom: 0.5rem; */
         }
 
         /* Mobile styles */
@@ -229,7 +243,7 @@
 
         /* Apply color to dropdown text */
         .collapse p {
-            color: var(--light-text);
+            color: var(--primary-text-color);
         }
 
         /* Spin animation */
@@ -251,7 +265,7 @@
 
         /* Main list title styling */
         .main-list-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             /* Optional additional styling */
             font-weight: 500;
             /* bold */
@@ -260,17 +274,17 @@
 
         /* Main list styles */
         .main-list {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.4rem;
         }
 
         .main-list-item {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.4rem;
 
         }
 
         /* Sublist title styling */
         .sub-list-title {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 500;
             color: var(--yellow-accent);
         }
@@ -282,7 +296,7 @@
         }
 
         .btn-custom {
-            background-color: #FFD700;
+            background-color: var(--yellow-accent);
             color: black;
             font-weight: 600;
             border: none;
@@ -301,7 +315,7 @@
 
         .form-control:focus {
             box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
-            border-color: #FFD700;
+            border-color: var(--yellow-accent);
         }
 
         /* Contact session ends */
@@ -320,7 +334,7 @@
 
         .tech-list li:before {
             content: "→";
-            color: #FFD700;
+            color: var(--yellow-accent);
             font-family: "Segoe UI Symbol", "Arial Unicode MS", sans-serif;
             font-weight: 800;
             position: absolute;
@@ -328,7 +342,7 @@
         }
 
         /*.tech-list strong {
-            color: #FFD700;
+            color: var(--yellow-accent);
         }
         /* Function owner list ends*/
 
@@ -343,8 +357,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #FFD700;
-            font-size: 1.1rem;
+            color: var(--yellow-accent);
+            font-size: 1rem;
             opacity: 0;
             transition: opacity 1s ease-in-out;
             pointer-events: none;
@@ -394,32 +408,33 @@
                             <img src="Malin_bild_2021_beskuren2.png" class="rounded-circle mx-auto mt-3"
                                 style="width: 150px; height: 150px; object-fit: cover;" alt="MA">
                             <div class="hover-text">
-                                <span style="color: #FFD700;">Malin</span>
+                                <span style="color: var(--yellow-accent);">Malin</span>
                             </div>
                         </a>
                     </div>
                     <div class="card-body">
                         <h4 class="card-title mb-3" style="color: #E0E0E0;">Malin Elser</h4>
                         <p class="card-text mb-0" style="font-weight: 0;">Master of Science in Engineering /</p>
-                        <p class="card-text mb-2" style="color: #FFD700;">Civilingenjörsexamen</p>
+                        <p class="card-text mb-2" style="color: var(--yellow-accent);">Civilingenjörsexamen</p>
                         <p class="card-text mb-0" style="font-weight: 0;">Main field of study:</p>
-                        <p class="card-text mb-2" style="color: #FFD700;">Mechanical Engineering</p>
+                        <p class="card-text mb-2" style="color: var(--yellow-accent);">Mechanical Engineering</p>
                         <p class="card-text mb-0" style="font-weight: 0;">Master's programme:</p>
-                        <p class="card-text mb-3" style="color: #FFD700;">Production Engineering</p>
-                        <p class="card-text mb-1" style="font-weight: 600; font-size: 1.1rem;">Tools:</p>
-                        <p class="card-text mb-0" style="color: #FFD700;">Matlab / TargetLink</p>
-                        <p class="card-text mb-0" style="color: #FFD700;">C</p>
-                        <p class="card-text mb-0" style="color: #FFD700;">Git</p>
-                        <p class="card-text mb-0" style="color: #FFD700;">ATI Vision</p>
-                        <p class="card-text mb-0" style="color: #FFD700;">SystemWeaver</p>
-                        <p class="card-text mb-0" style="color: #FFD700;">Jira</p>
-                        <p class="card-text mb-2" style="color: #FFD700;">Python</p>
-                        <p class="card-text mb-1" style="font-weight: 600; font-size: 1.1rem;">Languages:</p>
-                        <p class="card-text mb-0" style="color: #FFD700;">Swedish - Native speaker</p>
-                        <p class="card-text mb-2" style="color: #FFD700;">English - Fluent in speech and writing</p>
-                        <p class="card-text mb-1" style="font-weight: 600; font-size: 1.1rem;">Driving Licenses:</p>
-                        <p class="card-text mb-0" style="color: #FFD700;">B</p>
-                        <p class="card-text mb-2" style="color: #FFD700;">C</p>
+                        <p class="card-text mb-3" style="color: var(--yellow-accent);">Production Engineering</p>
+                        <p class="card-text mb-1" style="font-weight: 600; font-size: 1rem;">Tools:</p>
+                        <p class="card-text mb-0" style="color: var(--yellow-accent);">Matlab / TargetLink</p>
+                        <p class="card-text mb-0" style="color: var(--yellow-accent);">C</p>
+                        <p class="card-text mb-0" style="color: var(--yellow-accent);">Git</p>
+                        <p class="card-text mb-0" style="color: var(--yellow-accent);">ATI Vision</p>
+                        <p class="card-text mb-0" style="color: var(--yellow-accent);">SystemWeaver</p>
+                        <p class="card-text mb-0" style="color: var(--yellow-accent);">Jira</p>
+                        <p class="card-text mb-2" style="color: var(--yellow-accent);">Python</p>
+                        <p class="card-text mb-1" style="font-weight: 600; font-size: 1rem;">Languages:</p>
+                        <p class="card-text mb-0" style="color: var(--yellow-accent);">Swedish - Native speaker</p>
+                        <p class="card-text mb-2" style="color: var(--yellow-accent);">English - Fluent in speech and
+                            writing</p>
+                        <p class="card-text mb-1" style="font-weight: 600; font-size: 1rem;">Driving Licenses:</p>
+                        <p class="card-text mb-0" style="color: var(--yellow-accent);">B</p>
+                        <p class="card-text mb-2" style="color: var(--yellow-accent);">C</p>
 
 
 
@@ -671,11 +686,22 @@
                     </li>
                 </ul>
 
+                <!-- About me -->
+
+                <h2>Life outside of work</h2>
+                <p>I'm 35 years old and live in our house in Kvillebäcken with my family — my husband Alexander and our two children,
+                    Elise (11) and Stellan (8). As a family, we love spending time outdoors, especially sailing during
+                    the summer and enjoying nature and animals whenever we can. Weekends are often filled with outdoor
+                    adventures — when we're not at a soccer tournament, that is! In my own spare time, I enjoy
+                    socializing
+                    with friends, but I also have a bit of a nerdy side, I like working on personal tech projects e.g.
+                    my smart home system on my Raspberry Pi or like when building this website just for fun ;)</p>
+
                 <!-- Contact Section -->
                 <!-- Contact Section -->
                 <section id="contact" class="contact-section">
                     <div class="container">
-                        <h2 class="text-center mb-4 text-white">Contact Malin</h2>
+                        <h2 class="text-center mb-4">Contact Malin</h2>
                         <div class="row">
                             <div class="col-md-6 mx-auto">
                                 <form action="https://formsubmit.co/malin.elser@gmail.com" method="POST">
@@ -684,20 +710,20 @@
                                     <!-- Success page redirect (optional) -->
                                     <input type="hidden" name="_next" value="https://malinelser.github.io/tech/Mpage">
                                     <div class="mb-3">
-                                        <label for="name" class="form-label text-white">Name:</label>
-                                        <input type="text" class="form-control bg-dark text-white border-0"
+                                        <label for="name" class="form-label">Name:</label>
+                                        <input type="text" class="form-control bg-dark border-0"
                                             placeholder="Your Name" name="name" required>
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="email" class="form-label text-white">Email:</label>
-                                        <input type="email" class="form-control bg-dark text-white border-0"
+                                        <label for="email" class="form-label">Email:</label>
+                                        <input type="email" class="form-control bg-dark border-0"
                                             placeholder="Your Email" name="email" required>
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="message" class="form-label text-white">Message:</label>
-                                        <textarea name="message" class="form-control bg-dark text-white border-0"
+                                        <label for="message" class="form-label">Message:</label>
+                                        <textarea name="message" class="form-control bg-dark border-0"
                                             rows="4" placeholder="Your Message" required></textarea>
                                     </div>
 
@@ -708,7 +734,6 @@
                         </div>
                     </div>
                 </section>
-
 
 
                 <!-- end scrollable content-->
